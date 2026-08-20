@@ -9,13 +9,12 @@
 ## 📌 Overview
 This project is a Library Management System built using Advanced Java and MySQL. It was developed to streamline the daily operations of a library, replacing manual record-keeping with a fast, database-driven desktop interface. 
 
-*Note: This is one of my foundational projects built during my polytechnic studies, inspired by the Tuts Funny channel, to master GUI development and database connectivity.*
+*Note: This is one of my foundational projects built during my polytechnic studies to master GUI development, object-oriented programming, and database connectivity.*
 
 ## ✨ Core Features
-* **Book Management:** Add, view, and manage book inventories.
-* **Member Management:** Register and track student details.
-* **Issue & Return Tracking:** Keep accurate logs of when books are borrowed and returned.
-* **Interactive GUI:** User-friendly interface built using Java Swing/AWT.
+* **Book & Member Management:** Register students and track book inventories.
+* **Issue & Return Tracking:** Keep accurate logs of when books are borrowed and returned using automated date pickers.
+* **Modernized GUI:** Centered, isolated windows with a system-native look and feel.
 * **Database Integration:** Secure and reliable data storage using MySQL and JDBC.
 
 ## ⚙️ Local Setup Guide
@@ -25,15 +24,18 @@ Follow these steps to run the project on your local machine.
 ### 1. Prerequisites
 * **Java Development Kit (JDK):** Version 8 or higher.
 * **IDE:** [Apache NetBeans](https://netbeans.apache.org/) (Recommended).
-* **Database:** MySQL Server (You can use [XAMPP](https://www.apachefriends.org/index.html) or WAMP).
-* **Driver:** MySQL JDBC Connector (`mysql-connector-java.jar`).
+* **Database:** MySQL Server (Local installation or Docker).
+* **Required Libraries (Add to NetBeans):** 
+  * MySQL JDBC Connector (`mysql-connector-j.jar`)
+  * JCalendar (`jcalendar-1.4.jar`)
 
 ### 2. Database Setup
-1. Open your MySQL interface (e.g., phpMyAdmin or MySQL Workbench).
-2. Create a new database for the library system.
-3. Import the required SQL tables. *(Note: If you have an `.sql` file in the repository, mention it here. Otherwise, manually create the tables for Books and Students as required by the code).*
+This repository includes a `database.sql` file that contains all the required table structures. You can set it up in two ways:
 
-### 3. Installation & Running
-1. Clone this repository to your local machine:
-   ```bash
-   git clone [https://github.com/PheonixWay/LibraryManagmentUsingAJPinNeatbeans.git](https://github.com/PheonixWay/LibraryManagmentUsingAJPinNeatbeans.git)
+**Option A: Using Docker & Terminal (Recommended)**
+```bash
+# 1. Start a MySQL container
+docker run --name library-mysql -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=library_db -p 3306:3306 -d mysql:latest
+
+# 2. Import the schema (Run this in the same folder as your database.sql file)
+docker exec -i library-mysql mysql -uroot -proot library_db < database.sql
