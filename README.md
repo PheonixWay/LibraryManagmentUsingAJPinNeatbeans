@@ -32,6 +32,10 @@ Follow these steps to run the project on your local machine.
 ### 2. Database Setup
 This repository includes a `database.sql` file that contains all the required table structures. You can set it up in two ways:
 
+```Note
+Database connections are hardcoded, so if you are changing the username and password, you have to manually update the connection values on each page 
+```
+
 **Option A: Using Docker & Terminal (Recommended)**
 ```bash
 # 1. Start a MySQL container
