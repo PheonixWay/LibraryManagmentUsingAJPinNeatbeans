@@ -8,7 +8,7 @@
 
 ## 🎥 Project Demo & My Developer Journey
 
-<img width="1280" height="720" alt="LibraryManagmentSystemDemo" src="https://github.com/user-attachments/assets/82e7e8c4-1b4e-4da3-91b4-431bf872901b" />
+<img width="1100" height="720" alt="LibraryManagmentSystemDemo" src="https://github.com/user-attachments/assets/82e7e8c4-1b4e-4da3-91b4-431bf872901b" />
 
 
 ## 📌 Overview
