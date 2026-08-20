@@ -43,3 +43,46 @@ docker run --name library-mysql -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=li
 
 # 2. Import the schema (Run this in the same folder as your database.sql file)
 docker exec -i library-mysql mysql -uroot -proot library_db < database.sql
+```
+
+(Note: If port 3306 is in use, change the port mapping to 3307:3306 and update the Java code accordingly).
+
+**Option B: Using GUI (phpMyAdmin / MySQL Workbench)**
+
+```
+Create a new database named library_db in your MySQL server.
+
+Open the database and navigate to the Import tab.
+
+Select the database.sql file from this repository and execute it.
+
+```
+### 3. Installation & Running
+Clone this repository to your local machine:
+
+```Bash
+git clone [https://github.com/PheonixWay/LibraryManagmentUsingAJPinNeatbeans.git](https://github.com/PheonixWay/LibraryManagmentUsingAJPinNeatbeans.git)
+Open NetBeans IDE.
+
+Go to File > Open Project and select the cloned folder.
+
+Right-click on the Libraries folder in your NetBeans project tree, select Add JAR/Folder, and add the MySQL JDBC Connector and JCalendar .jar files.
+
+Update the database connection credentials in the source code (search for DriverManager.getConnection) to match your local MySQL setup:
+
+```
+
+```Java
+con = DriverManager.getConnection("jdbc:mysql://localhost:3306/library_db", "root", "root");
+Right-click on your main class (Main.java or Login.java) and select Run File.
+
+```
+
+### 📂 Tech Stack
+**Frontend/GUI**: _Java Swing_
+
+**Backend Logic**:_Core Java_ / _Advanced Java_
+
+**Database**: _MySQL_
+
+**Tooling**: _NetBeans IDE_
