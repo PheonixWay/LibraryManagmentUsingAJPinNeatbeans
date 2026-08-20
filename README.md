@@ -6,6 +6,11 @@
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
 ![NetBeans](https://img.shields.io/badge/NetBeans-1B6AC6?style=flat-square&logo=apache-netbeans&logoColor=white)
 
+## 🎥 Project Demo & My Developer Journey
+
+<img width="1280" height="720" alt="LibraryManagmentSystemDemo" src="https://github.com/user-attachments/assets/82e7e8c4-1b4e-4da3-91b4-431bf872901b" />
+
+
 ## 📌 Overview
 This project is a Library Management System built using Advanced Java and MySQL. It was developed to streamline the daily operations of a library, replacing manual record-keeping with a fast, database-driven desktop interface. 
 
